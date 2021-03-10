@@ -1,5 +1,7 @@
 {
   "name": "WebDevProj",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

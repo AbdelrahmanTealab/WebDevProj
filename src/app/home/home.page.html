@@ -6,15 +6,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" padding class="bg-class">
+      <ion-card class="ion-justify-content-center company-logo-card">
+        <ion-img src="../assets/img/logo.png" class="company-logo"></ion-img>
+        <ion-card-content style="text-align: center; margin: 1%;">
+          Tealab's HC is a new way for healthcare workers and doctors to keep track
+          of their daily tasks with ease and simplicity.
+        </ion-card-content>
+      </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-button expand="block"style="width: 70vw; margin:auto;">GET STARTED</ion-button>
+    <ion-button expand="block">Outline + Block</ion-button>
+
 </ion-content>

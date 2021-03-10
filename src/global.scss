@@ -24,3 +24,16 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.bg-class{
+  --background: linear-gradient(197deg, #A4F0E9 0%, #F5F5F5 100%) !important;
+}
+.company-logo{
+  height: 60vh !important;
+  width: auto !important;
+  align-items: center;
+}
+.company-logo-card{
+  margin: auto;
+  background-color: #00aaaa00;
+}
