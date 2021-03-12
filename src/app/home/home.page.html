@@ -1,21 +1,32 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar class="toolbar-home-class">
+
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true" padding class="bg-class">
       <ion-card class="ion-justify-content-center company-logo-card">
+
         <ion-img src="../assets/img/logo.png" class="company-logo"></ion-img>
-        <ion-card-content style="text-align: center; margin: 1%;">
+
+        <ion-card-content class="company-logo-card-text">
           Tealab's HC is a new way for healthcare workers and doctors to keep track
           of their daily tasks with ease and simplicity.
         </ion-card-content>
+
+        <ion-button [routerLink]="['/register']" expand="block" class="getstarted-button">GET STARTED</ion-button>
+
+        <ion-card-content class="company-logo-card-text" style="margin-top: 50px;">
+          Already have an account?
+        </ion-card-content>
+
+        <ion-button [routerLink]="['/login']" size="small" expand="block" fill="outline" class="signin-button">SIGN IN</ion-button>
+
+        <ion-card-content class="company-logo-card-text">
+          <sub>Application is made 100% by Abdelrahman Tealab <ion-text color="danger">301164103</ion-text>
+          for Centennial College MAPD-722 project using <ion-text color="primary">Ionic</ion-text> framework.
+        </sub>
+        </ion-card-content>
       </ion-card>
-
-    <ion-button expand="block"style="width: 70vw; margin:auto;">GET STARTED</ion-button>
-    <ion-button expand="block">Outline + Block</ion-button>
-
 </ion-content>

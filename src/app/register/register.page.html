@@ -1,9 +1,100 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
+  <ion-toolbar padding class="toolbar-transparent-class">
+    <ion-title>Register</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button class="my-back-button"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" padding class="bg-class">
+  <ion-card class="ion-justify-content-center company-logo-card">
 
+    <ion-img src="../assets/img/logo.png" class="company-logo-small"></ion-img>
+    <ion-card-title class="company-logo-card-text">welcome</ion-card-title>
+    <ion-card-content class="company-logo-card-text">
+      <ion-text><sub>
+        please begin by creating your new account.<br>
+        fields marked with <ion-text color="danger">*</ion-text> are required.
+      </sub></ion-text>
+    </ion-card-content>
+
+  <div class="item-input-form-bg">
+    <ion-item class="item-input-form">
+      <ion-label position="floating">First Name <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input placeholder="John" autocomplete="name" required="true"></ion-input>
+    </ion-item>
+
+    <ion-item class="item-input-form">
+      <ion-label position="floating">Last Name <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input placeholder="Doe" autocomplete="name" required="true"></ion-input>
+    </ion-item>
+
+    <ion-item class="item-input-form">
+      <ion-label position="floating">Birthdate <ion-text color="danger">*</ion-text></ion-label>
+      <ion-datetime value="1990-02-19" placeholder="Select Date" autocomplete="bday" required="true"></ion-datetime>
+    </ion-item>
+
+    <ion-item class="item-input-form">
+      <ion-label position="floating" >Email <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input placeholder="jdoe@email.com" autocomplete="email" inputmode="email"  type="email" required="true"></ion-input>
+    </ion-item>
+
+    <ion-item class="item-input-form">
+      <ion-label position="floating">Street Address</ion-label>
+      <ion-input placeholder="1 Main Street" autocomplete="street-address"></ion-input>
+    </ion-item>
+
+    <ion-item class="item-input-form">
+      <ion-label position="floating">Postal Code</ion-label>
+      <ion-input placeholder="1A2 9Z8" autocomplete="postal-code"></ion-input>
+    </ion-item>
+
+    <ion-item class="item-input-form">
+      <ion-label position="floating">Province</ion-label>
+      <ion-input value="Ontario" readonly></ion-input>
+    </ion-item>
+
+    <ion-item class="item-input-form">
+      <ion-label position="floating">Password <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input placeholder="************" autocomplete="new-password" type="password" required="true"></ion-input>
+    </ion-item>
+
+    <ion-item class="item-input-form">
+      <ion-label position="floating">Phone no.</ion-label>
+      <ion-input placeholder="+16471234567" autocomplete="tel" inputmode="tel"  type="tel"></ion-input>
+    </ion-item>
+
+    <ion-item class="item-input-form">
+      <ion-label>Occupation <ion-text color="danger">*</ion-text></ion-label>
+      <ion-select value="Nurse" ok-text="Select" cancel-text="Dismiss">
+        <ion-select-option value="Audiologist">Audiologist</ion-select-option>
+        <ion-select-option value="Chiropodist">Chiropodist</ion-select-option>
+        <ion-select-option value="Dietitian">Dietitian</ion-select-option>
+        <ion-select-option value="Kinesiologist">Kinesiologist</ion-select-option>
+        <ion-select-option value="Massage Therapist">Massage Therapist</ion-select-option>
+        <ion-select-option value="Medical Laboratory Technologist">Medical Laboratory Technologist</ion-select-option>
+        <ion-select-option value="Midwife">Midwife</ion-select-option>
+        <ion-select-option value="Nurse">Nurse</ion-select-option>
+        <ion-select-option value="Occupational Therapist">Occupational Therapist</ion-select-option>
+        <ion-select-option value="Optician">Optician</ion-select-option>
+        <ion-select-option value="Physician">Physician</ion-select-option>
+        <ion-select-option value="Physiotherapist">Physiotherapist</ion-select-option>
+        <ion-select-option value="Psychologist">Psychologist</ion-select-option>
+        <ion-select-option value="Psychotherapist">Psychotherapist</ion-select-option>
+        <ion-select-option value="Respiratory Therapist">Respiratory Therapist</ion-select-option>
+        <ion-select-option value="Speech-Language Pathologist">Speech-Language Pathologist</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+
+  <ion-card-content class="company-logo-card-text">
+    <ion-text><sub>
+      By clicking the 'Submit' button you automatically agree to our <a href="">Terms of Services</a>
+    </sub></ion-text>
+  </ion-card-content>
+
+  <ion-button [routerLink]="['/mainscreen']" expand="block" class="submit-button">SUBMIT</ion-button>
+
+</ion-card>
 </ion-content>

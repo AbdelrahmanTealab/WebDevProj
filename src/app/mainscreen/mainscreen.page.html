@@ -1,9 +1,25 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar padding class="toolbar-main-class">
+    <ion-buttons slot="start">
+      <ion-button class="my-logout-button">
+        Logout
+      </ion-button>
+    </ion-buttons>
     <ion-title>mainscreen</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" padding class="bg-class">
+
+  <ion-card>
+    <ion-row>
+      <ion-img src="../assets/img/user.png" class="user-photo"></ion-img>
+      <ion-col>
+          <ion-card-title>Jane Doe</ion-card-title>
+          <ion-card-subtitle>Occupational Therapist</ion-card-subtitle>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
 
 </ion-content>

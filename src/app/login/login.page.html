@@ -1,9 +1,43 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
+  <ion-toolbar padding class="toolbar-transparent-class">
+    <ion-title>Login</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button class="my-back-button"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" padding class="bg-class">
+  <ion-card class="ion-justify-content-center company-logo-card">
 
+    <ion-img src="../assets/img/logo.png" class="company-logo-small"></ion-img>
+    <ion-card-title class="company-logo-card-text">welcome</ion-card-title>
+    <ion-card-content class="company-logo-card-text">
+      <ion-text><sub>
+        please fill in your credentials to login.<br>
+      </sub></ion-text>
+    </ion-card-content>
+
+  <div class="item-input-form-bg">
+
+    <ion-item class="item-input-form">
+      <ion-label position="floating" >Email</ion-label>
+      <ion-input placeholder="jdoe@email.com" autocomplete="email" inputmode="email"  type="email" required="true"></ion-input>
+    </ion-item>
+
+    <ion-item class="item-input-form">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input placeholder="************" autocomplete="new-password" type="password" required="true"></ion-input>
+    </ion-item>
+  </div>
+
+  <ion-card-content class="company-logo-card-text">
+    <ion-text><sub>
+      By clicking the 'Sign in' button you automatically agree to our <a href="">Terms of Services</a>
+    </sub></ion-text>
+  </ion-card-content>
+
+  <ion-button [routerLink]="['/mainscreen']" expand="block" class="submit-button">SIGN IN</ion-button>
+
+</ion-card>
 </ion-content>

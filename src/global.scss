@@ -28,12 +28,95 @@
 .bg-class{
   --background: linear-gradient(197deg, #A4F0E9 0%, #F5F5F5 100%) !important;
 }
+
+.toolbar-home-class{
+  --background: linear-gradient(197deg, #A4F0E9 0%, #C0EFEB 100%) !important;
+  --border-width:0 !important;
+}
+.toolbar-transparent-class{
+  --background: linear-gradient(197deg, #05050588 0%, #ffffff88 100%) !important;
+  color: #3b3b3b;
+  opacity: 1;
+  box-shadow: 0px 5px 10px #00000088;
+}
+
+.toolbar-main-class{
+  --background: linear-gradient(197deg, #05050588 0%, #85858588 100%) !important;
+  color: #3b3b3b;
+  opacity: 1;
+  box-shadow: 0px 5px 10px #00000088;
+}
+
+.my-back-button{
+  color: #3b3b3b;
+  opacity: 1;
+}
+
+.my-logout-button{
+  --color: #3b3b3b;
+  opacity: 1;
+}
+
 .company-logo{
-  height: 60vh !important;
-  width: auto !important;
+  min-height: 20vh !important;
+  max-height: 400px !important;
+  max-width: 400px !important;
   align-items: center;
+  margin: auto;
+}
+.company-logo-small{
+  min-height: 10vh !important;
+  max-height: 200px !important;
+  max-width: 200px !important;
+  align-items: center;
+  margin: auto;
 }
 .company-logo-card{
   margin: auto;
   background-color: #00aaaa00;
+  box-shadow: 0px 0px;
+}
+
+.company-logo-card-text{
+  text-align: center;
+  color: #5f5f5f;
+}
+
+.getstarted-button{
+  width: 70vw;
+  margin:auto;
+  min-width: fit-content;
+  max-width: 500px !important;
+}
+.signin-button{
+  width: 40vw;
+  margin:auto;
+  max-width: 100px !important;
+  margin-bottom: 20px;
+}
+
+.submit-button{
+  width: 70vw;
+  margin:auto;
+  margin-bottom: 5%;
+  min-width: fit-content;
+  max-width: 500px !important;
+}
+
+.item-input-form{
+  --background:#00000000 !important;
+  color: #3b3b3b !important;
+  border-width: 0;
+}
+.item-input-form-bg{
+  background-color:#0000002f !important;
+  margin-left: 2% !important;
+  margin-right: 2% !important;
+  border-radius: 10px !important;
+  box-shadow: 0px 5px 10px #3b3b3b;
+  margin-bottom: 10px;
+}
+.user-photo{
+height: 64px;
+width: 64px;
 }
