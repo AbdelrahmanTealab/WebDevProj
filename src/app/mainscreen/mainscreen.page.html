@@ -1,24 +1,20 @@
 <ion-header>
   <ion-toolbar padding class="toolbar-main-class">
-    <ion-buttons slot="start">
-      <ion-button class="my-logout-button">
-        Logout
-      </ion-button>
-    </ion-buttons>
-
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true" padding class="bg-class">
-  <ion-item-divider sticky="true" class="main-header">
-      <ion-row>
+    <ion-item-divider sticky="true" class="main-header">
+      <ion-row class="main-header-row">
         <ion-img src="../assets/img/user.png" class="user-photo"></ion-img>
         <ion-col>
             <ion-card-subtitle>Jane Doe</ion-card-subtitle>
             <ion-card-subtitle><ion-text><sub>Occupational Therapist</sub></ion-text></ion-card-subtitle>
         </ion-col>
+        <ion-button class="my-logout-button" [routerLink]="['']" routerDirection="back"><ion-icon name="log-out-outline"></ion-icon></ion-button>
       </ion-row>
   </ion-item-divider>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" padding class="bg-class">
+
 
 <ion-list >
   <ion-item button detail lines = "inset" *ngFor="let patient of data">
