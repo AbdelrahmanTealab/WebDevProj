@@ -10,23 +10,34 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" padding class="bg-class">
+  <ion-item-divider sticky="true" class="main-header">
+      <ion-row>
+        <ion-img src="../assets/img/user.png" class="user-photo"></ion-img>
+        <ion-col>
+            <ion-card-subtitle>Jane Doe</ion-card-subtitle>
+            <ion-card-subtitle><ion-text><sub>Occupational Therapist</sub></ion-text></ion-card-subtitle>
+        </ion-col>
+      </ion-row>
+  </ion-item-divider>
 
-  <ion-card>
-    <ion-row>
-      <ion-img src="../assets/img/user.png" class="user-photo"></ion-img>
-      <ion-col>
-          <ion-card-title>Jane Doe</ion-card-title>
-          <ion-card-subtitle>Occupational Therapist</ion-card-subtitle>
-      </ion-col>
-    </ion-row>
-  </ion-card>
-
-<ion-button (click)="getData()">get data</ion-button>
-
-<ion-list>
+<ion-list >
   <ion-item button detail lines = "inset" *ngFor="let patient of data">
-    {{ patient.name }}
+    {{ patient.Name }}
   </ion-item>
 </ion-list>
 
 </ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="footer-main">
+    <ion-row class="footer-buttons-row">
+      <ion-button (click)="getData()"><ion-icon name="refresh-outline"></ion-icon></ion-button>
+      <ion-button><ion-icon name="person-add-outline"></ion-icon></ion-button>
+      <ion-button><ion-icon name="trash-outline"></ion-icon></ion-button>
+      <ion-button><ion-icon name="create-outline"></ion-icon></ion-button>
+    </ion-row>
+
+    <ion-searchbar showCancelButton="focus"></ion-searchbar>
+
+  </ion-toolbar>
+</ion-footer>

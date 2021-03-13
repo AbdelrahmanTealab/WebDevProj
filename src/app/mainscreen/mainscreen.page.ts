@@ -45,9 +45,6 @@ export class MainscreenPage implements OnInit {
       console.log(" my parsed data: ", parsed);
       this.data = parsed;
       console.log(" my final data: ", this.data);
-
-
-
     },err => {console.log('error during js call: ',err);});
   }
 
@@ -61,7 +58,7 @@ export class MainscreenPage implements OnInit {
   }
 
   ngOnInit() {
-
+    this.getData()
     }
 
 }

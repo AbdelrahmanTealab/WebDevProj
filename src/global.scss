@@ -40,22 +40,11 @@
   box-shadow: 0px 5px 10px #00000088;
 }
 
-.toolbar-main-class{
-  --background: linear-gradient(197deg, #05050588 0%, #85858588 100%) !important;
-  color: #3b3b3b;
-  opacity: 1;
-  box-shadow: 0px 5px 10px #00000088;
-}
-
 .my-back-button{
   color: #3b3b3b;
   opacity: 1;
 }
 
-.my-logout-button{
-  --color: #3b3b3b;
-  opacity: 1;
-}
 
 .company-logo{
   min-height: 20vh !important;
@@ -119,4 +108,24 @@
 .user-photo{
 height: 64px;
 width: 64px;
+}
+
+.toolbar-main-class{
+  --background:  #1b1b1b !important;
+  margin-bottom: 0;
+  opacity: 1;
+}
+.main-header{
+  margin: 0 !important;
+  background-color: #1b1b1b;
+  box-shadow: 0px 5px 10px #00000088;
+}
+.my-logout-button{
+  --color: #c5c5c5;
+  opacity: 1;
+}
+
+.footer-buttons-row{
+  margin: auto;
+  justify-content: space-around;
 }
