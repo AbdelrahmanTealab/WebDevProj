@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'mainscreen',
     loadChildren: () => import('./mainscreen/mainscreen.module').then( m => m.MainscreenPageModule)
   },
+  {
+    path: 'adding',
+    loadChildren: () => import('./adding/adding.module').then( m => m.AddingPageModule)
+  },
 ];
 
 @NgModule({

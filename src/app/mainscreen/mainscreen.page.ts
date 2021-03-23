@@ -4,14 +4,31 @@ import { HTTP } from '@ionic-native/http/ngx';
 import { LoadingController, Platform } from '@ionic/angular';
 import { from } from 'rxjs';
 import {finalize} from "rxjs/operators";
+import { ModalController } from '@ionic/angular';
+import { AddingPage } from '../adding/adding.page';
+
 @Component({
   selector: 'app-mainscreen',
   templateUrl: './mainscreen.page.html',
   styleUrls: ['./mainscreen.page.scss'],
 })
 export class MainscreenPage implements OnInit {
-  constructor(private http: HttpClient, private nativeHttp: HTTP, private plt: Platform, private loadingCtrl: LoadingController) {
+  constructor(
+    private http: HttpClient,
+     private nativeHttp: HTTP,
+      private plt: Platform,
+       private loadingCtrl: LoadingController,
+       private modalCtrl:ModalController) {
 
+  }
+
+  async showModal(){
+    const modal = await this.modalCtrl.create({
+      component: AddingPage,
+      cssClass: 'form-content',
+      showBackdrop: false,
+      swipeToClose: true
+    }).then(modalres =>{modalres.present();})
   }
 
   data = [];
@@ -49,6 +66,11 @@ export class MainscreenPage implements OnInit {
   }
 
 
+
+  ngOnInit() {
+    this.getData()
+    }
+
   getData(){
     if (this.plt.is('cordova')){
       this.getDataNative();
@@ -57,8 +79,8 @@ export class MainscreenPage implements OnInit {
     }
   }
 
-  ngOnInit() {
-    this.getData()
+    addData(){
+      this.showModal()
     }
 
 }

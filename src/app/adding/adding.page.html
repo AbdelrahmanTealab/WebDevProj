@@ -1,0 +1,48 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Patient</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-item class="item-input-form">
+    <ion-label position="floating">ID</ion-label>
+    <ion-input autocomplete="off" inputmode="numeric"  type="number"></ion-input>
+  </ion-item>
+  <ion-item class="item-input-form">
+    <ion-label position="floating">Full Name</ion-label>
+    <ion-input placeholder="John Doe" autocomplete="name" required="true"></ion-input>
+  </ion-item>
+  <ion-item class="item-input-form">
+    <ion-label position="floating">Age</ion-label>
+    <ion-input autocomplete="off" inputmode="numeric"  type="number"></ion-input>
+  </ion-item>
+  <ion-item class="item-input-form">
+    <ion-label position="floating">Datetime</ion-label>
+    <ion-input placeholder="John" autocomplete="name" required="true"></ion-input>
+  </ion-item>
+  <ion-item class="item-input-form">
+    <ion-label position="floating">Blood Pressure</ion-label>
+    <ion-input autocomplete="off" inputmode="numeric"  type="number"></ion-input>
+  </ion-item>
+  <ion-item class="item-input-form">
+    <ion-label position="floating">Respiratory Rate</ion-label>
+    <ion-input autocomplete="off" inputmode="numeric"  type="number"></ion-input>
+  </ion-item>
+  <ion-item class="item-input-form">
+    <ion-label position="floating">Blood Oxygen</ion-label>
+    <ion-input autocomplete="off" inputmode="numeric"  type="number"></ion-input>
+  </ion-item>
+  <ion-item class="item-input-form">
+    <ion-label position="floating">Heart Beat</ion-label>
+    <ion-input autocomplete="off" inputmode="numeric"  type="number"></ion-input>
+  </ion-item>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-row class="modal-footer-buttons-row">
+      <ion-button (click)="closeModal()" class="modal-footer-buttons-left"><ion-text style="color: #F5F5F5;">CANCEL</ion-text>  <ion-icon style="color: #F5F5F5;" name="close-outline"></ion-icon></ion-button>
+      <ion-button class="modal-footer-buttons-right"><ion-text style="color: #F5F5F5;">CONFIRM</ion-text> <ion-icon style="color: #F5F5F5;" name="checkmark-done-outline"></ion-icon></ion-button>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
