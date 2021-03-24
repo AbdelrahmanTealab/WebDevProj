@@ -1,48 +1,46 @@
-
-<ion-header>
-  <ion-toolbar>
+<ion-header style="margin: 0;">
+  <ion-toolbar >
     <ion-title>Add Patient</ion-title>
   </ion-toolbar>
 </ion-header>
 
-  <ion-item class="item-input-form">
-    <ion-label position="floating">ID</ion-label>
-    <ion-input autocomplete="off" inputmode="numeric"  type="number"></ion-input>
-  </ion-item>
-  <ion-item class="item-input-form">
-    <ion-label position="floating">Full Name</ion-label>
-    <ion-input placeholder="John Doe" autocomplete="name" required="true"></ion-input>
-  </ion-item>
-  <ion-item class="item-input-form">
-    <ion-label position="floating">Age</ion-label>
-    <ion-input autocomplete="off" inputmode="numeric"  type="number"></ion-input>
-  </ion-item>
-  <ion-item class="item-input-form">
-    <ion-label position="floating">Datetime</ion-label>
-    <ion-input placeholder="John" autocomplete="name" required="true"></ion-input>
-  </ion-item>
-  <ion-item class="item-input-form">
-    <ion-label position="floating">Blood Pressure</ion-label>
-    <ion-input autocomplete="off" inputmode="numeric"  type="number"></ion-input>
-  </ion-item>
-  <ion-item class="item-input-form">
-    <ion-label position="floating">Respiratory Rate</ion-label>
-    <ion-input autocomplete="off" inputmode="numeric"  type="number"></ion-input>
-  </ion-item>
-  <ion-item class="item-input-form">
-    <ion-label position="floating">Blood Oxygen</ion-label>
-    <ion-input autocomplete="off" inputmode="numeric"  type="number"></ion-input>
-  </ion-item>
-  <ion-item class="item-input-form">
-    <ion-label position="floating">Heart Beat</ion-label>
-    <ion-input autocomplete="off" inputmode="numeric"  type="number"></ion-input>
-  </ion-item>
+<form (ngSubmit)="postData()" style="margin: 0;">
+  <ion-card-subtitle color="light" style="background-color: burlywood; text-align: center; margin: 0;">{{today|date:"MMM dd, YYYY HH:mm a"}}</ion-card-subtitle>
 
-<ion-footer>
+<ion-item class="item-input-add-form">
+  <ion-label position="fixed">ID</ion-label>
+  <ion-input autocomplete="off" autocorrect="on" inputmode="numeric"  type="number" name="ID" [(ngModel)]="ID" #a (keyup.enter)="setFocus(b)"></ion-input>
+</ion-item>
+<ion-item class="item-input-add-form">
+  <ion-label position="fixed">Full Name</ion-label>
+  <ion-input placeholder="John Doe" autocomplete="name" autocorrect="on" required="true" name="Name" [(ngModel)]="Name" #b (keyup.enter)="setFocus(c)"></ion-input>
+</ion-item>
+<ion-item class="item-input-add-form">
+  <ion-label position="fixed">Age</ion-label>
+  <ion-input autocomplete="off" inputmode="numeric"  type="number" name="Age" [(ngModel)]="Age" #c (keyup.enter)="setFocus(e)"></ion-input>
+</ion-item>
+<ion-item class="item-input-add-form">
+  <ion-label position="stacked">Blood Pressure</ion-label>
+  <ion-input autocomplete="off" inputmode="decimal"  type="number" name="BloodPressure" [(ngModel)]="BloodPressure" #e (keyup.enter)="setFocus(f)"></ion-input>
+</ion-item>
+<ion-item class="item-input-add-form">
+  <ion-label position="stacked">Respiratory Rate</ion-label>
+  <ion-input autocomplete="off" inputmode="decimal"  type="number" name="RespiratoryRate" [(ngModel)]="RespiratoryRate" #f (keyup.enter)="setFocus(g)"></ion-input>
+</ion-item>
+<ion-item class="item-input-add-form">
+  <ion-label position="stacked">Blood Oxygen</ion-label>
+  <ion-input autocomplete="off" inputmode="decimal"  type="number" name="BloodOxygen" [(ngModel)]="BloodOxygen" #g (keyup.enter)="setFocus(h)"></ion-input>
+</ion-item>
+<ion-item class="item-input-add-form">
+  <ion-label position="stacked">Heart Beat</ion-label>
+  <ion-input autocomplete="off" inputmode="decimal"  type="number" name="HeartBeat" [(ngModel)]="HeartBeat" #h></ion-input>
+</ion-item>
+</form>
+<ion-footer style="margin: 0;">
   <ion-toolbar>
     <ion-row class="modal-footer-buttons-row">
       <ion-button (click)="closeModal()" class="modal-footer-buttons-left"><ion-text style="color: #F5F5F5;">CANCEL</ion-text>  <ion-icon style="color: #F5F5F5;" name="close-outline"></ion-icon></ion-button>
-      <ion-button class="modal-footer-buttons-right"><ion-text style="color: #F5F5F5;">CONFIRM</ion-text> <ion-icon style="color: #F5F5F5;" name="checkmark-done-outline"></ion-icon></ion-button>
+      <ion-button (click)="postData()" type="submit" class="modal-footer-buttons-right"><ion-text style="color: #F5F5F5;">CONFIRM</ion-text> <ion-icon style="color: #F5F5F5;" name="checkmark-done-outline"></ion-icon></ion-button>
     </ion-row>
   </ion-toolbar>
 </ion-footer>
