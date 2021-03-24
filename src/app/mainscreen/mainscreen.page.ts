@@ -31,6 +31,7 @@ export class MainscreenPage implements OnInit {
     }).then(modalres =>{modalres.present();})
   }
 
+   filterTerm: string;
   data = [];
 
   async getAllData(){
@@ -64,8 +65,6 @@ export class MainscreenPage implements OnInit {
       console.log(" my final data: ", this.data);
     },err => {console.log('error during js call: ',err);});
   }
-
-
 
   ngOnInit() {
     this.getData()

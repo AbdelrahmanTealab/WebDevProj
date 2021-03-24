@@ -26,7 +26,7 @@ const routes: Routes = [
   {
     path: 'adding',
     loadChildren: () => import('./adding/adding.module').then( m => m.AddingPageModule)
-  },
+  }
 ];
 
 @NgModule({

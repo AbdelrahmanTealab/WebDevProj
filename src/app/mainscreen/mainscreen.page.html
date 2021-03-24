@@ -15,10 +15,71 @@
 
 <ion-content [fullscreen]="true" padding class="bg-class">
 
+<ion-list class="item-list-bg">
 
-<ion-list >
-  <ion-item button detail lines = "inset" *ngFor="let patient of data">
-    {{ patient.Name }}
+  <ion-item class="item-list-bg" *ngFor="let patient of data | filter:filterTerm">
+    <ion-card class="item-list-card">
+      <img src="../assets/img/patientuser.png" />
+      <ion-card-header>
+        <ion-row class="ion-align-items-end">
+          <ion-col>
+            <ion-card-subtitle>{{patient.ID}}</ion-card-subtitle>
+          </ion-col>
+          <ion-col class="ion-align-self-start">
+            <ion-card-subtitle>{{patient.DateTime | date:"HH:mm a dd/MM/YYYY"}}</ion-card-subtitle>
+          </ion-col>
+        </ion-row>
+        <ion-card-title>{{patient.Name}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-row class="ion-align-items-end">
+          <ion-col>
+            <ion-label>Age</ion-label>
+          </ion-col>
+          <ion-col class="ion-align-self-start">
+            <ion-label class="item-list-card-value">{{patient.Age}}</ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-align-items-end">
+          <ion-col>
+            <ion-label>Blood Pressure</ion-label>
+          </ion-col>
+          <ion-col class="ion-align-self-start">
+            <ion-label class="item-list-card-value">{{patient.BloodPressure}}</ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-align-items-end">
+          <ion-col>
+            <ion-label>Respiratory Rate</ion-label>
+          </ion-col>
+          <ion-col class="ion-align-self-start">
+            <ion-label class="item-list-card-value">{{patient.RespiratoryRate}}</ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-align-items-end">
+          <ion-col>
+            <ion-label>Blood Oxygen</ion-label>
+          </ion-col>
+          <ion-col class="ion-align-self-start">
+            <ion-label class="item-list-card-value">{{patient.BloodOxygen}}</ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-align-items-end">
+          <ion-col>
+            <ion-label>Heart Beat</ion-label>
+          </ion-col>
+          <ion-col class="ion-align-self-start">
+            <ion-label class="item-list-card-value">{{patient.HeartBeat}}</ion-label>
+          </ion-col>
+        </ion-row>
+
+      </ion-card-content>
+    </ion-card>
   </ion-item>
 </ion-list>
 
@@ -33,7 +94,7 @@
       <ion-button><ion-icon name="create-outline"></ion-icon></ion-button>
     </ion-row>
 
-    <ion-searchbar showCancelButton="focus"></ion-searchbar>
+    <ion-searchbar showCancelButton="focus" placeholder="Search..." [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
 
   </ion-toolbar>
 </ion-footer>

@@ -188,7 +188,29 @@ width: 64px;
 .item-input-add-form-date{
   --background:#00000000 !important;
   color: #3b3b3b !important;
+  text-align: center;
+  margin: 0;
   border-width: 0;
   margin-left: 5%;
   margin-right: 5%;
 }
+
+.item-list-bg{
+background-color: transparent !important;
+--background: transparent !important;
+}
+
+.item-list-card{
+  background-color:#292929cc !important;
+  border-radius: 10px !important;
+  box-shadow: 0px 5px 10px #3b3b3b;
+  color: #d4d4d4;
+}
+.item-list-card-label{
+  text-align: left;
+  background-color: #A4F0E9;
+}
+.item-list-card-value{
+  text-align: right;
+}
+
