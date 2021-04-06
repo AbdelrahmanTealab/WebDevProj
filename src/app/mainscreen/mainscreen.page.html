@@ -17,7 +17,7 @@
 
 <ion-list class="item-list-bg">
 
-  <ion-item class="item-list-bg" *ngFor="let patient of data | filter:filterTerm">
+  <ion-item class="item-list-bg" *ngFor="let patient of data | filter:filterTerm" (click)="selectPatient(patient)">
     <ion-card class="item-list-card">
       <img src="../assets/img/patientuser.png" />
       <ion-card-header>

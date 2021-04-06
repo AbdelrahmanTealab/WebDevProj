@@ -22,6 +22,37 @@ export class MainscreenPage implements OnInit {
 
   }
 
+
+  filterTerm: string;
+  data = [];
+
+  selectedPatient = {
+    _id:'',
+    ID: '',
+    DateTime: '',
+    Name: '',
+    Age: '',
+    BloodPressure: '',
+    RespiratoryRate: '',
+    BloodOxygen: '',
+    HeartBeat: ''
+  };
+
+
+  selectPatient(patient){
+    this.selectedPatient = patient;
+    console.log("YASTA EL MAHALABEYA AHEH: ",this.selectedPatient)
+
+    var matchedPatient = this.data.filter(v => {
+      if(v._id.toLowerCase() == this.selectedPatient._id) {
+        return true;
+      }
+      return false;
+    })
+    console.log("Wel 7etta el gamda aheh: ", matchedPatient)
+
+  }
+
   async showModal(){
     const modal = await this.modalCtrl.create({
       component: AddingPage,
@@ -30,9 +61,6 @@ export class MainscreenPage implements OnInit {
       swipeToClose: true
     }).then(modalres =>{modalres.present();})
   }
-
-   filterTerm: string;
-  data = [];
 
   async getAllData(){
     let loading = await this.loadingCtrl.create();

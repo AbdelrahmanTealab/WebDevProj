@@ -194,11 +194,30 @@ width: 64px;
   margin-left: 5%;
   margin-right: 5%;
 }
-
 .item-list-bg{
 background-color: transparent !important;
 --background: transparent !important;
 }
+.item-list-card:hover{
+  color: #252525;
+  box-shadow:
+    inset 0 0 60px whitesmoke,
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0px 5px 10px #3b3b3b,
+    0 0 15px #fff,
+    0px 5px 15px #f0f,
+    0px 5px 15px #0ff;
+  }
+  .item-list-card:hover ion-card-subtitle{
+    color: #252525;
+    }
+  .item-list-card:hover ion-card-title{
+    color: #252525;
+    }
+
 
 .item-list-card{
   background-color:#292929cc !important;
@@ -212,5 +231,16 @@ background-color: transparent !important;
 }
 .item-list-card-value{
   text-align: right;
+}
+
+.selectedPatientStyle {
+  height: 70px;
+  width: 80%;
+  line-height: 70px;
+  text-align: center;
+  border: 2px solid #ddd4d4;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  transition: all 200ms ease-out;
 }
 
