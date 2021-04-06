@@ -6,6 +6,7 @@ import { from } from 'rxjs';
 import {finalize} from "rxjs/operators";
 import { ModalController } from '@ionic/angular';
 import { AddingPage } from '../adding/adding.page';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-mainscreen',
@@ -18,7 +19,8 @@ export class MainscreenPage implements OnInit {
      private nativeHttp: HTTP,
       private plt: Platform,
        private loadingCtrl: LoadingController,
-       private modalCtrl:ModalController) {
+       private modalCtrl:ModalController,
+       private alertCtrl: AlertController) {
 
   }
 
@@ -51,6 +53,36 @@ export class MainscreenPage implements OnInit {
     })
     console.log("Wel 7etta el gamda aheh: ", matchedPatient)
 
+  }
+
+  deleteData(){
+    if (this.selectedPatient.ID == ''){
+      console.log('balash 5edaa3 asa7by')
+    }
+    else{
+      console.log('nemsa7 el wad dah '+this.selectedPatient.ID)
+      let nativeCall = this.nativeHttp.delete('https://sem1-project-nodejs.herokuapp.com/patients/'+this.selectedPatient.ID,{},{
+      "content-type": "application/json"
+    });
+    this.confirmDeletion(this.selectedPatient.Name)
+    }
+  }
+
+  async confirmDeletion(name) {
+    console.log("confirm deletion is working")
+    const alert = await this.alertCtrl.create({
+      cssClass: 'my-custom-class',
+      header: 'Alert',
+      subHeader: '',
+      message: 'User '+name+' has been successfully deleted',
+      buttons: [{
+        text: 'OK',
+        handler: () => {
+          this.getData();
+        }
+      }]
+    });
+    await alert.present();
   }
 
   async showModal(){
