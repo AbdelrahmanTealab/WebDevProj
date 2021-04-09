@@ -91,7 +91,7 @@
       <ion-button (click)="getData()"><ion-icon name="refresh-outline"></ion-icon></ion-button>
       <ion-button (click)="addData()"><ion-icon name="person-add-outline"></ion-icon></ion-button>
       <ion-button (click)="deleteData()"><ion-icon name="trash-outline"></ion-icon></ion-button>
-      <ion-button><ion-icon name="create-outline"></ion-icon></ion-button>
+      <ion-button (click)="updateData()"><ion-icon name="create-outline"></ion-icon></ion-button>
     </ion-row>
 
     <ion-searchbar showCancelButton="focus" placeholder="Search..." [(ngModel)]="filterTerm" animated="true"></ion-searchbar>

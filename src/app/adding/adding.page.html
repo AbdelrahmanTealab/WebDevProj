@@ -1,6 +1,6 @@
 <ion-header style="margin: 0;">
   <ion-toolbar >
-    <ion-title>Add Patient</ion-title>
+    <ion-title>{{pageTitle}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -21,19 +21,19 @@
 </ion-item>
 <ion-item class="item-input-add-form">
   <ion-label position="stacked">Blood Pressure</ion-label>
-  <ion-input autocomplete="off" inputmode="decimal"  type="number" name="BloodPressure" [(ngModel)]="BloodPressure" #e (keyup.enter)="setFocus(f)"></ion-input>
+  <ion-input style="text-align: right;" autocomplete="off" inputmode="decimal"  type="number" name="BloodPressure" [(ngModel)]="BloodPressure" #e (keyup.enter)="setFocus(f)"></ion-input>
 </ion-item>
 <ion-item class="item-input-add-form">
   <ion-label position="stacked">Respiratory Rate</ion-label>
-  <ion-input autocomplete="off" inputmode="decimal"  type="number" name="RespiratoryRate" [(ngModel)]="RespiratoryRate" #f (keyup.enter)="setFocus(g)"></ion-input>
+  <ion-input style="text-align: right;" autocomplete="off" inputmode="decimal"  type="number" name="RespiratoryRate" [(ngModel)]="RespiratoryRate" #f (keyup.enter)="setFocus(g)"></ion-input>
 </ion-item>
 <ion-item class="item-input-add-form">
   <ion-label position="stacked">Blood Oxygen</ion-label>
-  <ion-input autocomplete="off" inputmode="decimal"  type="number" name="BloodOxygen" [(ngModel)]="BloodOxygen" #g (keyup.enter)="setFocus(h)"></ion-input>
+  <ion-input style="text-align: right;" autocomplete="off" inputmode="decimal"  type="number" name="BloodOxygen" [(ngModel)]="BloodOxygen" #g (keyup.enter)="setFocus(h)"></ion-input>
 </ion-item>
 <ion-item class="item-input-add-form">
   <ion-label position="stacked">Heart Beat</ion-label>
-  <ion-input autocomplete="off" inputmode="decimal"  type="number" name="HeartBeat" [(ngModel)]="HeartBeat" #h></ion-input>
+  <ion-input style="text-align: right;" autocomplete="off" inputmode="decimal"  type="number" name="HeartBeat" [(ngModel)]="HeartBeat" #h></ion-input>
 </ion-item>
 </form>
 <ion-footer style="margin: 0;">
